@@ -13,7 +13,7 @@ class App extends React.Component {
       playing:false
     };
     this.socket=null;
-    this.BACKEND_URL="http://localhost:4000/";
+    this.BACKEND_URL="http://127.0.0.1:4000/";
   }
 
 
@@ -22,7 +22,8 @@ class App extends React.Component {
     console.log(this.BACKEND_URL);
     
     this.socket=io(this.BACKEND_URL);
-
+    console.log(this.socket);
+    
     this.socket.on("message",(data)=>{
       this.setState({
         url:data.url
@@ -56,8 +57,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Demo</h1>
-        <ReactPlayer
+        
+        <ReactPlayer 
           controls
           ref={this.ref}
           playing={this.state.playing}
