@@ -1,5 +1,10 @@
 .App {
-  text-align: center;
+  /* display: flex;
+  justify-content: center;
+  border: solid;
+  border-radius: 20px;
+  border-color: blueviolet;
+   */
 }
 
 .App-logo {
